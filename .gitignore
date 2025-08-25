@@ -1,0 +1,4 @@
+source/*
+bin/*
+build/*
+.vscode/*
