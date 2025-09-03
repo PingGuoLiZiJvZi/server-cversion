@@ -158,7 +158,7 @@ int buffer_send_data(struct Buffer *buffer, int socket)
 	int readable = buffer_readable_room(buffer);
 	if (readable > 0)
 	{
-		Debug("start to send data:%s", buffer->data + buffer->readpos);
+		// Debug("start to send data:%s", buffer->data + buffer->readpos);
 		int count = send(socket, buffer->data + buffer->readpos, readable, MSG_NOSIGNAL);
 		if (count)
 		{

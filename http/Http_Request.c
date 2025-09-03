@@ -578,6 +578,12 @@ void send_dir(const char *dir_name, struct Buffer *sendbuf, int communicate_sock
 	for (int i = 0; i < num; i++)
 	{
 		char *name = name_list[i]->d_name;
+		if (name[0] == '.')
+		{
+			free(name_list[i]);
+			name_list[i] = NULL;
+			continue;
+		}
 		char sub_path[1024] = {0};
 		sprintf(sub_path, "%s/%s", dir_name, name);
 		struct stat st;
