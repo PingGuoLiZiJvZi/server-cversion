@@ -2,3 +2,4 @@ source/*
 bin/*
 build/*
 .vscode/*
+lib/*

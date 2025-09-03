@@ -18,7 +18,7 @@ foreach(path ${SUBDIRECTORIES})
     endif()
 endforeach()
 
-list(REMOVE_ITEM subdirectories ".vscode" "build"  "bin" "lib" "source")
+list(REMOVE_ITEM subdirectories ".vscode" "build"  "bin" "lib" "source" ".git")
 
 message("Subdirectories: ${subdirectories}")
 
