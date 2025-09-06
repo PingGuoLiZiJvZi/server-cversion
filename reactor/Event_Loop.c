@@ -69,6 +69,10 @@ int event_activate(struct Event_Loop *evloop, int fd, int event)
 		return -1;
 	}
 	struct Channel *channel = evloop->channel_map->list[fd];
+	if (channel == NULL)
+	{
+		return -1;
+	}
 	assert(fd == channel->fd);
 	if (event & READEVENT && channel->read_call_back != NULL)
 	{

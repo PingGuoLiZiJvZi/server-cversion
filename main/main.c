@@ -7,7 +7,7 @@
 int main(int argc, char *argv[])
 {
 	unsigned short port = 11111;
-	char *source_dir = "/home";
+	char *source_dir = "/media/pingguolizijvzi/serverdata";
 	if (argc >= 2)
 	{
 		port = atoi(argv[1]);
