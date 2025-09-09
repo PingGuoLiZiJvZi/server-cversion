@@ -41,7 +41,7 @@ void buffer_expand(struct Buffer *buffer, int size)
 	else if (buffer_writable_room(buffer) + buffer->readpos >= size)
 	{
 		int readable = buffer_readable_room(buffer);
-		memcpy(buffer->data, buffer->data + buffer->readpos, readable);
+		memmove(buffer->data, buffer->data + buffer->readpos, readable);
 		buffer->readpos = 0;
 		buffer->writepos = readable;
 	}

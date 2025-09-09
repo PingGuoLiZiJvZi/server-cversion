@@ -5,7 +5,7 @@
 #include "Buffer.h"
 #include "Http_Response.h"
 #include "Tcp_Connection.h"
-#define HEADER_SIZE 12
+#define HEADER_SIZE 32
 struct Http_Header
 {
     char *key;
